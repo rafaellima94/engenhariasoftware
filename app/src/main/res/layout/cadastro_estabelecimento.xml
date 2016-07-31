@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/button_material_light">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Voltar para página principal"
+        android:id="@+id/button5"
+        android:onClick="voltar"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText10"
+            android:text="Nome"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editText11"
+            android:text="E-mail"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/editText10"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Digite a Senha"
+            android:id="@+id/textView6"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editText11"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:ems="10"
+            android:id="@+id/editText12"
+            android:text="Senha1234"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView6"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Confirme a Senha"
+            android:id="@+id/textView7"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editText12"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:ems="10"
+            android:id="@+id/editText13"
+            android:text="Senha1234"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView7"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/editText14"
+            android:text="Data de Nacimento"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editText13"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/editText15"
+            android:text="Telefone"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editText14"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText16"
+            android:layout_alignParentStart="true"
+            android:text="Endereço"
+            android:layout_below="@+id/editText15"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText17"
+            android:layout_alignParentStart="true"
+            android:text="Cidade"
+            android:layout_below="@+id/editText16"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText18"
+            android:text="Estado"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editText17"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:id="@+id/button8"
+            android:onClick="voltar"
+            android:layout_alignTop="@+id/editText18"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/textView7"
+            android:layout_toEndOf="@+id/textView7" />
+    </RelativeLayout>
+</RelativeLayout>
