@@ -9,78 +9,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="grupodecompras.testeg4.MainActivity">
 
-    <TextView
+    <WebView
+        android:id="@+id/webView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Bem Vindo ao Grupo de Compras"
-        android:id="@+id/textView"
-        android:textColor="@color/colorPrimary"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Cadastrar Usuário"
-        android:id="@+id/button"
-        android:clickable="true"
-        android:background="@color/accent_material_dark"
-        android:textStyle="bold"
-        android:layout_above="@+id/button3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="81dp"
-        android:onClick="cadastra_usuario"
-        />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Cadastrar Estabelecimento"
-        android:id="@+id/button2"
-        android:background="@color/highlighted_text_material_dark"
-        android:textStyle="bold"
-        android:clickable="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:onClick="cadastro_estabelecimento"
-        />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/button3"
-        android:background="@color/highlighted_text_material_dark"
-        android:textStyle="bold"
-        android:clickable="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="126dp"
-        android:onClick="login"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Cadastre-se"
-        android:id="@+id/textView2"
-        android:layout_above="@+id/button2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Entrar"
-        android:id="@+id/textView3"
-        android:layout_above="@+id/button3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 </RelativeLayout>

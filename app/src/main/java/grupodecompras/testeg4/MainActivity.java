@@ -3,40 +3,37 @@ package grupodecompras.testeg4;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.app.Activity;
+import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 
-public class MainActivity extends AppCompatActivity {
 
+public class MainActivity extends Activity {
+
+    WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        webView = (WebView)findViewById(R.id.webView1);
+
+        WebSettings webSetting = webView.getSettings();
+        webSetting.setBuiltInZoomControls(true);
+        webSetting.setJavaScriptEnabled(true);
+
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("file:///android_asset/index.html");
     }
 
-    // Aqui começa os códigos dos botões
-    //botão 1
-    public void cadastra_usuario (View View)
+    private class WebViewClient extends android.webkit.WebViewClient
     {
-        setContentView(R.layout.cadastra_usuario);
-    }
-    //botão 2
-    public void cadastro_estabelecimento (View View)
-    {
-        setContentView(R.layout.cadastro_estabelecimento);
-    }
-    //botão 3
-    public void login (View View)
-    {
-        setContentView(R.layout.login);
-    }
-    //botão 3
-    public void voltar (View View)
-    {
-        setContentView(R.layout.activity_main);
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url)
+        {
+            return super.shouldOverrideUrlLoading(view, url);
+        }
     }
 
-    //botão 4
-    public void principal (View View)
-    {
-        setContentView(R.layout.principal);
-    }
 }
