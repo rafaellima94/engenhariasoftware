@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Eng Software</title>
+	    <meta charset="utf-8"/>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	</head>
+	<body style="font-size:16px;">
+		<nav class="navbar navbar-default navbar-static-top" style="background-color:orange;">
+			 <div class="container-fluid">
+			 	<div class="navbar-header">
+			      	<a class="navbar-brand" href="map.html">Engenharia de Software</a>
+			    </div>
+			    	<ul class="nav navbar-nav">
+				      	<li class="active"><a href="map.html">Home</a></li>
+				      	<li style="float:right;"><a href="index.html">Sair</a></li> 
+			    	</ul>
+			  	</div>
+			 </div>
+		</nav>
+		<div id="map" style="width:500px: height:400px;">
+		</div>
+	</body>
+	<script type="text/javascript">
+
+
+	    function success() {/*
+		    var isDown = true;
+            var dragend = false;
+            var idle = false;
+            var mapcanvas = document.createElement('div');
+            mapcanvas.id = 'mapcontainer';
+            mapcanvas.style.height = '540px';
+            mapcanvas.style.width = '1150.190px';
+            mapcanvas.style.borderRadius = '6px';
+
+            document.getElementById('map').appendChild(mapcanvas);
+
+            var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+            var options = {
+                zoom: 16,
+                center: coords,
+                mapTypeControl: false,
+                streetViewControl: false,
+                navigationControlOptions: {
+                    style: google.maps.NavigationControlStyle.SMALL
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("mapcontainer"), options);
+
+		    var mapDiv = document.getElementById('map');
+	        var map = new google.maps.Map(mapDiv, {
+	            center: {lat: 44.540, lng: -78.546},
+    	        zoom: 8
+        	});*/
+		}
+	function initMap() {
+	    if (navigator.geolocation) {
+            var mapcanvas = document.createElement('div');
+            mapcanvas.id = 'mapcontainer';
+            mapcanvas.style.height = '540px';
+            mapcanvas.style.width = '1150.190px';
+            mapcanvas.style.borderRadius = '6px';
+
+            document.getElementById('map').appendChild(mapcanvas);
+
+            var coords = new google.maps.LatLng(-21.776751, -43.371710);
+
+
+            var options = {
+                zoom: 16,
+                center: coords,
+                mapTypeControl: true,
+                streetViewControl: true,
+                navigationControlOptions: {
+                    style: google.maps.NavigationControlStyle.SMALL
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("mapcontainer"), options);
+
+            var marker = new google.maps.Marker({
+			    position: coords,
+			    map: map,
+			    title: 'Click to zoom'
+			});
+        } else {
+            error('Geo Location is not supported');
+        }
+    }
+	</script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDATnh9sOr50ep-LEifKXLJyUM8fYZ4fYM&callback=initMap"></script>
+</html>
