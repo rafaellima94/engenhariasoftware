@@ -37,48 +37,49 @@
 </div>
 
 </body>
-<form action="ListaDeCompras.html" method="post">
-    <h2 align="center">Selecione a Lista</h2>
-    <select>
-        <option value="lista1">Lista Mercado</option>
-        <option value="lista2">Lista Padaria</option>
-        <option value="lista3">Lista Lanchonete</option>
-        <option value="lista4">Lista Farmacia</option>
-    </select>
-    <h1></h1>
-    <h2 align="center">Selecione o produto</h2>
-    <select>
-        <option value="produto1">Arroz</option>
-        <option value="produto2">Carne</option>
-        <option value="produto3">Feijão</option>
-        <option value="produto4">Café</option>
-    </select>
-    <h1></h1>
-    <label for="nome">Nome do produto:</label>
-    <input type="nome" id="nome" name="nome" placeholder="Arroz">
-    <h1></h1>
-    <label>Quantidade:</label>
-    <input type="number" id="quantidade" name="quantidade" placeholder="1">
-    <h1></h1>
-    <label>Descrição:</label>
-    <input type="textarea" id="descricao" name="descricao" placeholder="Integral">
-    <h1></h1>
-    <label>Preço (aproximado):</label>
-    <input type="number" id="preco" name="preco" value="10"  >
-    <h1></h1>
-    <div class="btn btn-primary btn-lg btn-block" type="button"  onclick="submitEnviar()" style="margin-top: 30px;"> Atualizar Produto da Lista </button>
-    </div>
+    <form action="ListaDeCompras.html" method="post">
+        <h2 align="center">Selecione a Lista</h2>
+        <select>
+            <option value="lista1">Lista Mercado</option>
+            <option value="lista2">Lista Padaria</option>
+            <option value="lista3">Lista Lanchonete</option>
+            <option value="lista4">Lista Farmacia</option>
+        </select>
+        <h1></h1>
+        <h2 align="center">Selecione o produto</h2>
+        <select>
+            <option value="produto1">Arroz</option>
+            <option value="produto2">Carne</option>
+            <option value="produto3">Feijão</option>
+            <option value="produto4">Café</option>
+        </select>
+        <h1></h1>
+        <label for="nome">Nome do produto:</label>
+        <input type="nome" id="nome" name="nome" placeholder="Arroz">
+        <h1></h1>
+        <label>Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" placeholder="1">
+        <h1></h1>
+        <label>Descrição:</label>
+        <input type="textarea" id="descricao" name="descricao" placeholder="Integral">
+        <h1></h1>
+        <label>Preço (aproximado):</label>
+        <input type="number" id="preco" name="preco" value="10"  >
+        <h1></h1>
+        <div class="btn btn-primary btn-lg btn-block" type="button"  onclick="submitEnviar()" style="margin-top: 30px;"> Atualizar Produto da Lista </button>
+        </div>
 
-    <!--Adicionar teste de verificação do formulário-->
-    <script type="text/javascript">
-        var submitEnviar = function(){
-            if((document.getElementById('nome').value != '')){
-                $( location ).attr("href", "ListaDeCompras.html");
-            } else {
-                alert("Add um nome para o produto!!!");
+        <!--Adicionar teste de verificação do formulário-->
+        <script type="text/javascript">
+            var submitEnviar = function(){
+                if((document.getElementById('nome').value != '')){
+                    $( location ).attr("href", "ListaDeCompras.html");
+                } else {
+                    alert("Add um nome para o produto!!!");
+                }
             }
-        }
-	</script>
-</form>
+        </script>
+
+    </form>
 
 </html>
