@@ -23,6 +23,8 @@
 					<ul class="nav navbar-nav">
 						<li><a href="map.html">Home</a></li>
 						<li><a href="ListaDeCompras.html">Cadastra Lista</a></li>
+						<li class="active"><a href="ListaDeCompras.html">Lista de Compras</a></li>
+						<li class="active"><a href="perfil.html">Perfil</a></li>
 						<li><a href="index.html">Sair</a></li>
 					</ul>
 				</div>
@@ -50,10 +52,8 @@
 			if (navigator.geolocation) {
 				var mapcanvas = document.createElement('div');
 				mapcanvas.id = 'mapcontainer';
-				mapcanvas.style.height = '400px';
-				mapcanvas.style.width = '300px';
-				mapcanvas.style.margin = '10px';
-				mapcanvas.style.borderRadius = '6px';
+				mapcanvas.style.height = '100vh';
+				mapcanvas.style.width = '100vw';
 
 				document.getElementById('map').appendChild(mapcanvas);
 
