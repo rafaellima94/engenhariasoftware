@@ -11,28 +11,33 @@
 		<nav class="navbar navbar-default navbar-static-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="map.html">Engenharia de Software</a>
+					<a class="navbar-brand" href="index.html">Engenharia de Software</a>
 				</div>
 			</div>
 		</nav>
 		<div class="container" style="height:calc(100vh - 50px);">
-			<h1 style="text-align:center; margin:50px;">Trabalho de Engenharia de Software</h1>
+			<h3 style="text-align:center; margin:50px;">Grupo de Compras</h3>
 			<div>
-				<h2>Login</h2>
-				<input class="form-control input-lg" type="text" id="login">
-				<h2>Senha</h2>
-				<input class="form-control input-lg" type="password" id="senha">
-				<button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitLogin()" style="margin-top: 30px;">Entrar</button>
+				<h3>Login</h3>
+				<input class="form-control input-lg" type="text" id="login" placeholder="E-mail">
+				<br>
+				<input class="form-control input-lg" type="password" id="senha" placeholder="Senha">
+				<button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitLogin()" style="margin-top: 30px;">Entrar</button>		
+			</div>
+			<br>
+			<div>
+				<h5 style="text-align:center"> Ainda não é cadastrado? Cadastre-se aqui! </h5>
+				<button class="btn  btn-lg btn-block" type="button" style="margin-top: 20px;"><a href="cadastro.html">Cadastrar</a></button>
 			</div>
 		</div>
 	</body>
 	<script type="text/javascript">
-			var submitLogin = function(){
-				if((document.getElementById('login').value == 'admin') && (document.getElementById('senha').value == 'admin')){
-					$( location ).attr("href", "map.html");
-				} else {
-					alert("Login ou senha inválido!");
-				}
+		var submitLogin = function(){
+			if((document.getElementById('login').value == 'admin') && (document.getElementById('senha').value == 'admin')){
+				$( location ).attr("href", "map.html");
+			} else {
+				alert("Login ou senha inválido!");
 			}
+		}
 	</script>
 </html>

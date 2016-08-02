@@ -21,86 +21,66 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="map.html">Home<span class="sr-only">(current)</span></a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
+						<li><a href="map.html">Home</a></li>
+						<li><a href="ListaDeCompras.html">Cadastra Lista</a></li>
+						<li class="active"><a href="ListaDeCompras.html">Lista de Compras</a></li>
+						<li class="active"><a href="perfil.html">Perfil</a></li>
 						<li><a href="index.html">Sair</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<div id="map" style="width:500px: height:400px;">
+		<div id="map">
 		</div>
+		<button class="btn btn-success btn-lg" style="position:absolute; z-index:2; bottom:40px; left:calc(50% - 82.05px);" onclick="placesSearch()">Locais próximos</button>
 	</body>
 	<script type="text/javascript">
 
+		var placesSearch = function(){
+			$( location ).attr("href", "places.html");
+		}
 
-	    function success() {/*
-		    var isDown = true;
-            var dragend = false;
-            var idle = false;
-            var mapcanvas = document.createElement('div');
-            mapcanvas.id = 'mapcontainer';
-            mapcanvas.style.height = '540px';
-            mapcanvas.style.width = '1150.190px';
-            mapcanvas.style.borderRadius = '6px';
 
-            document.getElementById('map').appendChild(mapcanvas);
-
-            var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
-            var options = {
-                zoom: 16,
-                center: coords,
-                mapTypeControl: false,
-                streetViewControl: false,
-                navigationControlOptions: {
-                    style: google.maps.NavigationControlStyle.SMALL
-                },
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            var map = new google.maps.Map(document.getElementById("mapcontainer"), options);
-
+	    /*function initMap() {
 		    var mapDiv = document.getElementById('map');
 	        var map = new google.maps.Map(mapDiv, {
-	            center: {lat: 44.540, lng: -78.546},
+	            center: {lat: -21.776751, lng: -43.371710},
     	        zoom: 8
-        	});*/
+        	});
+		}*/
+		function initMap() {
+			if (navigator.geolocation) {
+				var mapcanvas = document.createElement('div');
+				mapcanvas.id = 'mapcontainer';
+				mapcanvas.style.height = '100vh';
+				mapcanvas.style.width = '100vw';
+
+				document.getElementById('map').appendChild(mapcanvas);
+
+				var coords = new google.maps.LatLng(-21.776751, -43.371710);
+
+
+				var options = {
+					zoom: 16,
+					center: coords,
+					mapTypeControl: true,
+					streetViewControl: true,
+					navigationControlOptions: {
+						style: google.maps.NavigationControlStyle.SMALL
+					},
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+				var map = new google.maps.Map(document.getElementById("mapcontainer"), options);
+
+				var marker = new google.maps.Marker({
+					position: coords,
+					map: map,
+					title: 'Click to zoom'
+				});
+			} else {
+				error('Geo Location is not supported');
+			}
 		}
-	function initMap() {
-	    if (navigator.geolocation) {
-            var mapcanvas = document.createElement('div');
-            mapcanvas.id = 'mapcontainer';
-            mapcanvas.style.height = '540px';
-            mapcanvas.style.width = '1150.190px';
-            mapcanvas.style.borderRadius = '6px';
-
-            document.getElementById('map').appendChild(mapcanvas);
-
-            var coords = new google.maps.LatLng(-21.776751, -43.371710);
-
-
-            var options = {
-                zoom: 16,
-                center: coords,
-                mapTypeControl: true,
-                streetViewControl: true,
-                navigationControlOptions: {
-                    style: google.maps.NavigationControlStyle.SMALL
-                },
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            var map = new google.maps.Map(document.getElementById("mapcontainer"), options);
-
-            var marker = new google.maps.Marker({
-			    position: coords,
-			    map: map,
-			    title: 'Click to zoom'
-			});
-        } else {
-            error('Geo Location is not supported');
-        }
-    }
 	</script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDATnh9sOr50ep-LEifKXLJyUM8fYZ4fYM&callback=initMap"></script>
 </html>
