@@ -36,19 +36,10 @@
 		<button class="btn btn-success btn-lg" style="position:absolute; z-index:2; bottom:40px; left:calc(50% - 82.05px);" onclick="placesSearch()">Locais próximos</button>
 	</body>
 	<script type="text/javascript">
-
 		var placesSearch = function(){
 			$( location ).attr("href", "places.html");
 		}
 
-
-	    /*function initMap() {
-		    var mapDiv = document.getElementById('map');
-	        var map = new google.maps.Map(mapDiv, {
-	            center: {lat: -21.776751, lng: -43.371710},
-    	        zoom: 8
-        	});
-		}*/
 		function initMap() {
 			if (navigator.geolocation) {
 				var mapcanvas = document.createElement('div');
@@ -59,8 +50,6 @@
 				document.getElementById('map').appendChild(mapcanvas);
 
 				var coords = new google.maps.LatLng(-21.776751, -43.371710);
-
-
 				var options = {
 					zoom: 16,
 					center: coords,
