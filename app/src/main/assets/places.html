@@ -1,8 +1,33 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Traffic layer</title>
-	</head>
-	<body>
-	</body>
+<head>
+	<title>Traffic layer</title>
+	<style>
+		html, body, #map-canvas {
+		height: 100%;
+		margin: 0px;
+		padding: 0px
+		}
+	</style>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDATnh9sOr50ep-LEifKXLJyUM8fYZ4fYM&callback=initMap"></script>
+	<script>
+                  function initialize() {
+                    var myLatlng = new google.maps.LatLng(34.04924594193164, -118.24104309082031);
+                    var mapOptions = {
+                      zoom: 13,
+                      center: myLatlng
+                    }
+
+                    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+                    var trafficLayer = new google.maps.TrafficLayer();
+                    trafficLayer.setMap(map);
+                  }
+
+                  google.maps.event.addDomListener(window, 'load', initialize);
+
+                      </script>
+</head>
+<body>
+</body>
 </html>
