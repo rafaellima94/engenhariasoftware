@@ -22,12 +22,9 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="map.html">Home</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="ListaDeCompras.html">Lista de Compras<span class="sr-only">(current)</span></a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="map.html">Home</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li class="active"><a href="ListaDeCompras.html">Lista de Compras</a></li>
                         <li><a href="index.html">Sair</a></li>
                     </ul>
                 </div>
@@ -69,11 +66,11 @@
                     <label>Preço (aproximado):</label>
                     <input class="form-control" type="number" id="preco" name="preco" value="10"  >
                 </div>
-                <h2 align="center">Selecione o produto</h2>
                 <div class="form-group">
+                    <label>Status da Compra:</label>
                     <select class="form-control">
-                        <option value="produto1">Comprado</option>
-                        <option value="produto2">Pendente</option>
+                        <option value="produto1">Pendente</option>
+                        <option value="produto2">Comprado</option>
                     </select>
                 </div>
                 <div class="btn btn-primary btn-lg btn-block" type="button"  onclick="submitEnviar()" style="margin-top: 30px;"> Atualizar Produto da Lista </button>
