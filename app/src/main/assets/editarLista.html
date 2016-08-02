@@ -69,17 +69,19 @@
                     <label>Preço (aproximado):</label>
                     <input class="form-control" type="number" id="preco" name="preco" value="10"  >
                 </div>
+                <h2 align="center">Selecione o produto</h2>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option value="produto1">Comprado</option>
+                        <option value="produto2">Pendente</option>
+                    </select>
+                </div>
                 <div class="btn btn-primary btn-lg btn-block" type="button"  onclick="submitEnviar()" style="margin-top: 30px;"> Atualizar Produto da Lista </button>
                 </div>
-
-                <!--Adicionar teste de verificação do formulário-->
+                <!--Adicionar testes de verificação do formulário-->
                 <script type="text/javascript">
                     var submitEnviar = function(){
-                        if((document.getElementById('nome').value != '')){
-                            $( location ).attr("href", "ListaDeCompras.html");
-                        } else {
-                            alert("Add um nome para o produto!!!");
-                        }
+                        $( location ).attr("href", "ListaDeCompras.html");
                     }
                 </script>
 

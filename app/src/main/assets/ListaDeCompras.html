@@ -8,55 +8,52 @@
     <link rel="stylesheet" href="bootstrap-3.3.7-dist\css\bootstrap.css">
 </head>
 <body style="font-size:16px;">
-<nav class="navbar navbar-default navbar-static-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="map.html">Engenharia de Software</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="map.html">Home</a></li>
-            </ul>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="ListaDeCompras.html">Lista de Compras<span class="sr-only">(current)</span></a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html">Sair</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div id="map" style="width:500px: height:400px;">
-</div>
-
-</body>
-<form action="ListaDeCompras.html" method="post">
-    <h2>Listas de Compras</h2>
-    <div>
-        <h1>Criar Lista</h1>
-        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitCriar()" style="margin-top: 30px;">Criar</button>
-        <h2>Editar Lista</h2>
-        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitEditar()" style="margin-top: 30px;">Editar</button>
-        <h2>Compartilhar Lista</h2>
-        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitCompartilhar()" style="margin-top: 30px;">Compartilar</button>
-    </div>
-    <script type="text/javascript">
-			var submitCriar = function(){
-				$( location ).attr("href", "AddListaDeCompras.html");
-			}
-			var submitEditar = function(){
-				$( location ).attr("href", "editarLista.html");
-			}
-			var submitCompartilhar = function(){
-				$( location ).attr("href", "compartilhar.html");
-			}
-	</script>
-
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="map.html">Engenharia de Software</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="map.html">Home</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="ListaDeCompras.html">Lista de Compras<span class="sr-only">(current)</span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <form action="ListaDeCompras.html" method="post">
+            <h1 align="center">Listas de Compras</h1>
+            <div>
+                <h2>Criar Lista</h2>
+                <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitCriar()" style="margin-top: 30px;">Criar</button>
+                <h2>Editar Lista</h2>
+                <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitEditar()" style="margin-top: 30px;">Editar</button>
+                <h2>Compartilhar Lista</h2>
+                <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitCompartilhar()" style="margin-top: 30px;">Compartilar</button>
+            </div>
+            <script type="text/javascript">
+                    var submitCriar = function(){
+                        $( location ).attr("href", "AddListaDeCompras.html");
+                    }
+                    var submitEditar = function(){
+                        $( location ).attr("href", "editarLista.html");
+                    }
+                    var submitCompartilhar = function(){
+                        $( location ).attr("href", "compartilhar.html");
+                    }
+            </script>
+        </form>
+    </body>
 </html>
