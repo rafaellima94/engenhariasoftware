@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lista de Compras</title>
+    <title>Criar Lista de Compras</title>
     <meta charset="utf-8"/>
     <script src="jquery.js"></script>
     <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
@@ -38,25 +38,51 @@
 
 </body>
 <form action="ListaDeCompras.html" method="post">
-    <h2>Listas de Compras</h2>
+    <h2 align="center">Selecione ou Crie sua Lista</h2>
+    <select>
+        <option value="lista1">Lista Mercado</option>
+        <option value="lista2">Lista Padaria</option>
+        <option value="lista3">Lista Lanchonete</option>
+        <option value="lista4">Lista Farmacia</option>
+    </select>
+    <h1></h1>
     <div>
-        <h1>Criar Lista</h1>
-        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitCriar()" style="margin-top: 30px;">Criar</button>
-        <h2>Editar Lista</h2>
-        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitEditar()" style="margin-top: 30px;">Editar</button>
-        <h2>Compartilhar Lista</h2>
-        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitCompartilhar()" style="margin-top: 30px;">Compartilar</button>
+        <label for="lista">Nome da Lista:</label>
+        <input type="lista" id="lista" />
     </div>
+    <h1></h1>
+    <div>
+        <label for="nome">Nome do Produto:</label>
+        <input type="nome" id="nome" />
+    </div>
+    <h1></h1>
+    <div>
+        <label for="quantidade" >Quantidade:</label>
+        <input type="quantidade" id="quantidade" />
+    </div>
+    <h1></h1>
+    <div>
+        <label for="descrição">Descrição:</label>
+        <textarea id="descrição"></textarea>
+    </div>
+    <h1></h1>
+    <div>
+        <label id="preco" for="preco">Preço (aproximado):</label>
+        <input type="preco" id="preco" />
+    </div>
+    <h1></h1>
+    <div class="btn btn-primary btn-lg btn-block" type="button"  onclick="submitEnviar()" style="margin-top: 30px;"> Adicionar na Lista </button>
+    </div>
+    <!--Adicionar teste de verificação do formulário-->
     <script type="text/javascript">
-			var submitCriar = function(){
-				$( location ).attr("href", "AddListaDeCompras.html");
-			}
-			var submitEditar = function(){
-				$( location ).attr("href", "editarLista.html");
-			}
-			var submitCompartilhar = function(){
-				$( location ).attr("href", "compartilhar.html");
+			var submitEnviar = function(){
+				if((document.getElementById('nome').value != '')){
+					$( location ).attr("href", "ListaDeCompras.html");
+				} else {
+					alert("Add um nome para o produto!!!");
+				}
 			}
 	</script>
+</form>
 
 </html>
