@@ -1,88 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Criar Lista de Compras</title>
-    <meta charset="utf-8"/>
-    <script src="jquery.js"></script>
-    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="bootstrap-3.3.7-dist\css\bootstrap.css">
-</head>
-<body style="font-size:16px;">
-<nav class="navbar navbar-default navbar-static-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="map.html">Engenharia de Software</a>
+    <head>
+        <title>Criar Lista de Compras</title>
+        <meta charset="utf-8"/>
+        <script src="jquery.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist\css\bootstrap.css">
+    </head>
+    <body style="font-size:16px;">
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="map.html">Engenharia de Software</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="map.html">Home</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="ListaDeCompras.html">Lista de Compras<span class="sr-only">(current)</span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container" style="height:calc(100vh - 50px);">
+            <form action="ListaDeCompras.html" method="post" role="form">
+                <h2 align="center">Selecione ou Crie sua Lista</h2>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option value="lista1">Lista Mercado</option>
+                        <option value="lista2">Lista Padaria</option>
+                        <option value="lista3">Lista Lanchonete</option>
+                        <option value="lista4">Lista Farmacia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lista">Nome da Lista:</label>
+                    <input type="lista" id="lista" class="form-control"/>
+                </div >
+                <div class="form-group">
+                    <label for="nome">Nome do Produto:</label>
+                    <input type="nome" id="nome" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade" >Quantidade:</label>
+                    <input type="quantidade" id="quantidade" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="descrição">Descrição:</label>
+                    <textarea id="descrição" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label id="preco" for="preco">Preço (aproximado):</label>
+                    <input type="preco" id="preco" class="form-control"/>
+                </div>
+                <div class="btn btn-primary btn-lg btn-block" type="button"  onclick="submitEnviar()" style="margin-top: 30px;"> Adicionar na Lista </button>
+                </div>
+                <!--Adicionar teste de verificação do formulário-->
+                <script type="text/javascript">
+                        var submitEnviar = function(){
+                            if((document.getElementById('nome').value != '')){
+                                $( location ).attr("href", "ListaDeCompras.html");
+                            } else {
+                                alert("Add um nome para o produto!!!");
+                            }
+                        }
+                </script>
+            </form>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="map.html">Home</a></li>
-            </ul>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="ListaDeCompras.html">Lista de Compras<span class="sr-only">(current)</span></a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html">Sair</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div id="map" style="width:500px: height:400px;">
-</div>
-
-</body>
-<form action="ListaDeCompras.html" method="post">
-    <h2 align="center">Selecione ou Crie sua Lista</h2>
-    <select>
-        <option value="lista1">Lista Mercado</option>
-        <option value="lista2">Lista Padaria</option>
-        <option value="lista3">Lista Lanchonete</option>
-        <option value="lista4">Lista Farmacia</option>
-    </select>
-    <h1></h1>
-    <div>
-        <label for="lista">Nome da Lista:</label>
-        <input type="lista" id="lista" />
-    </div>
-    <h1></h1>
-    <div>
-        <label for="nome">Nome do Produto:</label>
-        <input type="nome" id="nome" />
-    </div>
-    <h1></h1>
-    <div>
-        <label for="quantidade" >Quantidade:</label>
-        <input type="quantidade" id="quantidade" />
-    </div>
-    <h1></h1>
-    <div>
-        <label for="descrição">Descrição:</label>
-        <textarea id="descrição"></textarea>
-    </div>
-    <h1></h1>
-    <div>
-        <label id="preco" for="preco">Preço (aproximado):</label>
-        <input type="preco" id="preco" />
-    </div>
-    <h1></h1>
-    <div class="btn btn-primary btn-lg btn-block" type="button"  onclick="submitEnviar()" style="margin-top: 30px;"> Adicionar na Lista </button>
-    </div>
-    <!--Adicionar teste de verificação do formulário-->
-    <script type="text/javascript">
-			var submitEnviar = function(){
-				if((document.getElementById('nome').value != '')){
-					$( location ).attr("href", "ListaDeCompras.html");
-				} else {
-					alert("Add um nome para o produto!!!");
-				}
-			}
-	</script>
-</form>
-
+    </body>
 </html>
