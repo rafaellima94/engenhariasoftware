@@ -22,38 +22,37 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="map.html">Home</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="ListaDeCompras.html">Lista de Compras<span class="sr-only">(current)</span></a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="map.html">Home</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li class="active"><a href="ListaDeCompras.html">Lista de Compras</a></li>
                         <li><a href="index.html">Sair</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <form action="ListaDeCompras.html" method="post">
-            <h1 align="center">Listas de Compras</h1>
-            <div>
-                <h2>Criar Lista</h2>
-                <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitCriar()" style="margin-top: 30px;">Criar</button>
-                <h2>Editar Lista</h2>
-                <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitEditar()" style="margin-top: 30px;">Editar</button>
-                <h2>Compartilhar Lista</h2>
-                <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitCompartilhar()" style="margin-top: 30px;">Compartilar</button>
-            </div>
-            <script type="text/javascript">
-                    var submitCriar = function(){
-                        $( location ).attr("href", "AddListaDeCompras.html");
-                    }
-                    var submitEditar = function(){
-                        $( location ).attr("href", "editarLista.html");
-                    }
-                    var submitCompartilhar = function(){
-                        $( location ).attr("href", "compartilhar.html");
-                    }
-            </script>
-        </form>
+        <div class="container" style="height:calc(100vh - 50px);">
+            <form action="ListaDeCompras.html" method="post">
+                <h1 align="center">Listas de Compras</h1>
+                <div>
+                    <h3>Criar Lista</h3>
+                    <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitCriar()" style="margin-top: 30px;">Criar</button>
+                    <h3>Editar Lista</h3>
+                    <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitEditar()" style="margin-top: 30px;">Editar</button>
+                    <h3>Compartilhar Lista</h3>
+                    <button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitCompartilhar()" style="margin-top: 30px;">Compartilar</button>
+                </div>
+                <script type="text/javascript">
+                        var submitCriar = function(){
+                            $( location ).attr("href", "AddListaDeCompras.html");
+                        }
+                        var submitEditar = function(){
+                            $( location ).attr("href", "editarLista.html");
+                        }
+                        var submitCompartilhar = function(){
+                            $( location ).attr("href", "compartilhar.html");
+                        }
+                </script>
+            </form>
+        </div>
     </body>
 </html>
