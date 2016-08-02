@@ -22,7 +22,8 @@
 				<input class="form-control input-lg" type="text" id="login" placeholder="E-mail">
 				<br>
 				<input class="form-control input-lg" type="password" id="senha" placeholder="Senha">
-				<button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitLogin()" style="margin-top: 30px;">Entrar</button>		
+				<button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitLogin()" style="margin-top: 30px;">Entrar</button>
+				<button class="btn btn-primary btn-lg btn-block" type="button" onclick="submitEsqueceuSenha()" style="margin-top: 30px;">Recuperar senha</button>
 			</div>
 			<br>
 			<div>
@@ -32,6 +33,9 @@
 		</div>
 	</body>
 	<script type="text/javascript">
+		var submitEsqueceuSenha = function(){
+			$( location ).attr("href", "recuperarSenha.html");
+		}
 		var submitLogin = function(){
 			if((document.getElementById('login').value == 'admin') && (document.getElementById('senha').value == 'admin')){
 				$( location ).attr("href", "map.html");
